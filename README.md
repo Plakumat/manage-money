@@ -2,7 +2,7 @@
 
 Moneybox project is a mock data application made to listing financial information.
 
-![Project Image](https://github.com/Plakumat/moneybox/blob/main/demo.png?raw=true)
+![Project Image](https://github.com/Plakumat/manage-money/blob/main/demo.png?raw=true)
 
 ## Tech Tools
 
