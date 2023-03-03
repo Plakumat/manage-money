@@ -21,6 +21,8 @@ Libraries used:
 
 ```
 ├── src/
+│   ├── app
+│   ├── assets
 │   ├── components
 │   │       ├── activities
 │   │       ├── button
