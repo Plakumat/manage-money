@@ -1,0 +1,107 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+.select-filled-label.MuiInputLabel-shrink {
+  .MuiTypography-root {
+    color: $darker-gray !important;
+    font-size: 12px !important;
+  }
+}
+
+.css-1gctnaj-MuiInputBase-input-MuiFilledInput-input {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.css-10botns-MuiInputBase-input-MuiFilledInput-input {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.css-nj1ibz-MuiInputBase-root-MuiFilledInput-root-MuiSelect-root {
+  padding-left: 20px;
+}
+
+.css-d9oaum-MuiSelect-select-MuiInputBase-input-MuiFilledInput-input.MuiSelect-select {
+  padding-left: 20px;
+}
+
+.css-78trlr-MuiButtonBase-root-MuiIconButton-root {
+  padding: 0 !important;
+
+  &:hover {
+    background-color: unset !important;
+  }
+}
+
+.css-jv61v3-MuiInputAdornment-root {
+  width: 18px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.css-3qbkez-MuiSelect-icon {
+  right: 20px !important;
+}
+
+.css-10q54uo-MuiSelect-icon {
+  right: 20px !important;
+}
+
+.MuiInputLabel-formControl.MuiInputLabel-shrink {
+  padding: 0 !important;
+  top: 6px !important;
+  left: 10px !important;
+  color: $darker-gray !important;
+  font-size: 12px !important;
+}
+
+.MuiFormLabel-root {
+  color: $darker-gray !important;
+  padding: 2px 0 0 10px !important;
+}
+
+.css-t43ey2-MuiButtonBase-root-MuiMenuItem-root {
+  position: relative !important;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: start !important;
+  -ms-flex-align: start !important;
+  align-items: flex-start !important;
+  -webkit-box-pack: center !important;
+  -ms-flex-pack: center !important;
+  justify-content: center !important;
+  max-height: 40px;
+  padding-top: 9px !important;
+  padding-bottom: 9px !important;
+
+  &::after {
+    content: '';
+    width: 90%;
+    position: absolute;
+    border-bottom: 1px solid $dark-white;
+    bottom: -2px;
+    left: auto;
+    right: auto;
+  }
+
+  &:last-child {
+    &::after {
+      border: 0;
+    }
+  }
+}
+
+.visibility-icon {
+  width: 18px !important;
+}

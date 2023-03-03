@@ -1,0 +1,30 @@
+/* mq mixin takes reference those breakpoints and set them */
+/* two params can be passable to mq function */
+
+$breakpoints: (
+  'phone': 400px,
+  'phone-wide': 480px,
+  'tablet-small': 640px,
+  'tablet': 768px,
+  'tablet-medium': 820px,
+  'desktop-height': 830px,
+  'desktop': 1248px,
+  'desktop-wide': 1400px,
+  'desktop-wide-large': 1600px,
+);
+@mixin mq($width, $type: min) {
+  @if map_has_key($breakpoints, $width) {
+    $width: map_get($breakpoints, $width);
+    @if $type == max {
+      $width: $width + 1px;
+    }
+    @if $type == 'max-height' {
+      @media only screen and (#{$type}: $width) {
+        @content;
+      }
+    }
+    @media only screen and (#{$type}-width: $width) {
+      @content;
+    }
+  }
+}

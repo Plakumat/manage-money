@@ -1,0 +1,9 @@
+/* simple ellipsis mixin */
+
+@mixin text-cut($truncation-boundary) {
+  width: $truncation-boundary;
+  white-space: nowrap;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+}
