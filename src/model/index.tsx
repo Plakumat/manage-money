@@ -20,15 +20,10 @@ export interface IFormProps {
   onLoading: () => void;
 }
 
-export interface IOption {
-  label: string;
-  value: string | number;
-}
-
 export interface ISelectProps {
   label: string;
   value: string;
-  options: Array<IOption>;
+  options: Array<string>;
   error?: boolean;
   onChange: (value: string) => void;
 }

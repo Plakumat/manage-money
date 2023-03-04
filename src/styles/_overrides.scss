@@ -12,9 +12,36 @@
   }
 }
 
-.css-1gctnaj-MuiInputBase-input-MuiFilledInput-input {
+.css-1gctnaj-MuiInputBase-input-MuiFilledInput-input,
+.css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input {
   padding-left: 0 !important;
   padding-right: 0 !important;
+}
+
+.css-q8hpuo-MuiFormControl-root
+  .css-f90qt9-MuiFormControl-root-MuiTextField-root
+  .css-zdnbnt-MuiFormLabel-root-MuiInputLabel-root,
+.css-q8hpuo-MuiFormControl-root
+  .css-c01tca-MuiFormControl-root-MuiTextField-root
+  .css-zdnbnt-MuiFormLabel-root-MuiInputLabel-root {
+  left: 8px !important;
+  top: 25px !important;
+}
+
+.css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input.MuiSelect-select {
+  height: 10px;
+  position: relative;
+  top: 10px;
+  left: 0;
+}
+
+.css-vqmohf-MuiButtonBase-root-MuiRadio-root.Mui-checked {
+  color: white !important;
+}
+
+.css-11zohuh-MuiSvgIcon-root {
+  background-color: #155ed4;
+  border-radius: 50%;
 }
 
 .css-10botns-MuiInputBase-input-MuiFilledInput-input {
@@ -100,6 +127,10 @@
       border: 0;
     }
   }
+}
+
+.css-1d3z3hw-MuiOutlinedInput-notchedOutline {
+  border: 0 !important;
 }
 
 .visibility-icon {

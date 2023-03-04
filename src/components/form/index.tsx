@@ -99,11 +99,7 @@ const Form: React.FC<IFormProps> = (props: IFormProps) => {
       <Select
         value={userType}
         label='Kullanıcı Tipi'
-        options={[
-          { label: 'Standart Hesap', value: 1 },
-          { label: 'Onaylı Hesap', value: 2 },
-          { label: 'Premium Hesap', value: 3 },
-        ]}
+        options={['Standart Hesap', 'Onaylı Hesap', 'Premium Hesap']}
         onChange={handleUserType}
         error={userTypeError}
       />

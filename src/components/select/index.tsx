@@ -1,15 +1,17 @@
-import React from 'react';
-import InputLabel from '@mui/material/InputLabel';
+import React, { useState, useEffect } from 'react';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
+import FormControlLabel from '@mui/material/FormControlLabel';
 import { SelectChangeEvent } from '@mui/material/Select';
-import Typography from '@mui/material/Typography';
+import Radio from '@mui/material/Radio';
 import { ReactComponent as ArrowDown } from '../../assets/svg/arrow-down.svg';
-import { palette, CustomSelect } from './customization';
-import { ISelectProps, IOption } from '../../model';
+import { CustomSelect } from './customization';
+import { ISelectProps } from '../../model';
+import CircleIcon from '@mui/icons-material/Circle';
 
 const SelectComponent: React.FC<ISelectProps> = (props: ISelectProps) => {
   const { label, value, options, error, onChange, ...rest } = props;
+  const [currentValue, setCurrentValue] = useState('');
 
   /**
    *
@@ -17,29 +19,33 @@ const SelectComponent: React.FC<ISelectProps> = (props: ISelectProps) => {
    */
   const handleChange = (event: SelectChangeEvent) => {
     onChange(event.target.value);
+    setCurrentValue(event.target.value);
   };
 
   return (
     <FormControl variant='filled' sx={{ width: '100%' }}>
-      <InputLabel className='select-filled-label'>
-        <Typography color={palette.status.default.placeholder}>
-          {label}
-        </Typography>
-      </InputLabel>
       <CustomSelect
-        labelId='select-filled-label'
+        select
+        id='select-filled-label'
         className='select-filled'
-        value={value}
-        onChange={handleChange}
-        IconComponent={ArrowDown}
+        label={label}
+        SelectProps={{
+          multiple: false,
+          value: value,
+          onChange: (e: SelectChangeEvent) => handleChange(e),
+          renderValue: (selected: any) => selected,
+          IconComponent: ArrowDown,
+        }}
         error={error}
-        disableUnderline
         {...rest}
       >
-        {options?.map((option: IOption, index: number) => {
+        {options?.map((option: string, index: number) => {
           return (
-            <MenuItem key={index} value={option.value}>
-              {option.label}
+            <MenuItem key={index} value={option}>
+              <FormControlLabel
+                control={<Radio checked={currentValue === option} />}
+                label={option}
+              />
             </MenuItem>
           );
         })}
