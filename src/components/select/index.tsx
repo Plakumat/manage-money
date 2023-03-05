@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import FormControlLabel from '@mui/material/FormControlLabel';
@@ -7,7 +7,6 @@ import Radio from '@mui/material/Radio';
 import { ReactComponent as ArrowDown } from '../../assets/svg/arrow-down.svg';
 import { CustomSelect } from './customization';
 import { ISelectProps } from '../../model';
-import CircleIcon from '@mui/icons-material/Circle';
 
 const SelectComponent: React.FC<ISelectProps> = (props: ISelectProps) => {
   const { label, value, options, error, onChange, ...rest } = props;
