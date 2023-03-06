@@ -1,4 +1,5 @@
 import React from 'react';
+import { IBadgeProps } from '../../model';
 import styled from 'styled-components/macro';
 
 const Badge: React.FC<IBadgeProps> = (props: IBadgeProps) => {
@@ -28,8 +29,3 @@ const Badge: React.FC<IBadgeProps> = (props: IBadgeProps) => {
 };
 
 export default Badge;
-
-export interface IBadgeProps {
-  value?: number;
-  className?: string;
-}

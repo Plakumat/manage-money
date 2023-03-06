@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { IPaginationProps } from '../../model';
 import styled from 'styled-components/macro';
 
 const Pagination: React.FC<IPaginationProps> = (props: IPaginationProps) => {
@@ -80,9 +81,3 @@ const Pagination: React.FC<IPaginationProps> = (props: IPaginationProps) => {
 };
 
 export default Pagination;
-
-export interface IPaginationProps {
-  division: number;
-  pagerClick?: (e: React.MouseEvent<HTMLElement>) => any;
-  className?: string;
-}

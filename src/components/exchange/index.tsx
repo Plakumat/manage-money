@@ -1,6 +1,14 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { CurrencyAPI } from '../../service';
-import { DOLAR, EURO, STERLIN, GRAM_ALTIN, CURRENCY_STATUS } from '../../model';
+import {
+  DOLAR,
+  EURO,
+  STERLIN,
+  GRAM_ALTIN,
+  CURRENCY_STATUS,
+  IGold,
+  ICurrency,
+} from '../../model';
 import Dollar from '../../assets/svg/dollar.svg';
 import Euro from '../../assets/svg/euro.svg';
 import Sterlin from '../../assets/svg/sterlin.svg';
@@ -145,28 +153,3 @@ const Exchange: React.FC = () => {
 };
 
 export default Exchange;
-
-export interface IGold {
-  buying?: number;
-  buyingstr?: string;
-  date?: string;
-  datetime?: string;
-  name?: string;
-  rate?: number;
-  selling?: number;
-  sellingstr?: string;
-  time?: string;
-}
-
-export interface ICurrency extends IGold {
-  calculated?: number;
-  code?: string;
-}
-
-export interface ICurrencyList {
-  result: Array<ICurrency>;
-}
-
-export interface IGoldList {
-  result: Array<IGold>;
-}

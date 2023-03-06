@@ -1,6 +1,12 @@
 import React from 'react';
 import Badge from '../badge';
-import { ACCOUNTS, CARDS, PROCESSES, CAMPAIGNS } from '../../model';
+import {
+  IHeaderProps,
+  ACCOUNTS,
+  CARDS,
+  PROCESSES,
+  CAMPAIGNS,
+} from '../../model';
 import Fups from '../../assets/svg/fups.svg';
 import Avatar from '../../assets/avatar.png';
 
@@ -64,9 +70,3 @@ const Header: React.FC<IHeaderProps> = (props: IHeaderProps) => {
 };
 
 export default Header;
-
-export interface IHeaderProps {
-  username?: string;
-  userType?: string;
-  logout?: () => void;
-}

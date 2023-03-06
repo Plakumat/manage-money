@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import { API } from '../../service';
-import { ACTIVITIES, SPEND_ANALYSIS, MOCK_AMOUNT } from '../../model';
+import { IPost, ACTIVITIES, SPEND_ANALYSIS, MOCK_AMOUNT } from '../../model';
 import Pagination from '../pagination';
 import Food from '../../assets/svg/food.svg';
 import Gold from '../../assets/svg/gold.svg';
@@ -97,11 +97,3 @@ const Activities: React.FC = () => {
 };
 
 export default Activities;
-
-export interface IPost {
-  body?: string;
-  email?: string;
-  id?: number;
-  name?: string;
-  postId?: number;
-}

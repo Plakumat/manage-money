@@ -82,3 +82,53 @@ export interface IInputProps {
   error?: boolean;
   onChange: (value: string) => void;
 }
+
+export interface IPost {
+  body?: string;
+  email?: string;
+  id?: number;
+  name?: string;
+  postId?: number;
+}
+
+export interface IBadgeProps {
+  value?: number;
+  className?: string;
+}
+
+export interface IGold {
+  buying?: number;
+  buyingstr?: string;
+  date?: string;
+  datetime?: string;
+  name?: string;
+  rate?: number;
+  selling?: number;
+  sellingstr?: string;
+  time?: string;
+}
+
+export interface ICurrency extends IGold {
+  calculated?: number;
+  code?: string;
+}
+
+export interface ICurrencyList {
+  result: Array<ICurrency>;
+}
+
+export interface IGoldList {
+  result: Array<IGold>;
+}
+
+export interface IHeaderProps {
+  username?: string;
+  userType?: string;
+  logout?: () => void;
+}
+
+export interface IPaginationProps {
+  division: number;
+  pagerClick?: (e: React.MouseEvent<HTMLElement>) => any;
+  className?: string;
+}
