@@ -49,8 +49,8 @@ const Exchange: React.FC = () => {
 
   useEffect(() => {
     if (loading) {
-      // getCurrencyList().catch(console.error);
-      // getGoldPricesList().catch(console.error);
+      getCurrencyList().catch(console.error);
+      getGoldPricesList().catch(console.error);
     }
 
     setLoading(true);
