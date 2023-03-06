@@ -39,20 +39,20 @@ export const CarouselResponsive = {
     items: 5,
   },
   desktop: {
-    breakpoint: { max: 3000, min: 1024 },
+    breakpoint: { max: 3000, min: 1340 },
     items: 4,
     partialVisibilityGutter: 10,
   },
   tablet: {
-    breakpoint: { max: 1024, min: 700 },
+    breakpoint: { max: 1340, min: 1060 },
     items: 3,
   },
   mobile: {
-    breakpoint: { max: 700, min: 430 },
+    breakpoint: { max: 1060, min: 640 },
     items: 2,
   },
   superMobile: {
-    breakpoint: { max: 430, min: 320 },
+    breakpoint: { max: 640, min: 320 },
     items: 1,
   },
 };

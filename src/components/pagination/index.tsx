@@ -12,6 +12,10 @@ const Pagination: React.FC<IPaginationProps> = (props: IPaginationProps) => {
     flex-direction: row;
     justify-content: center;
     button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-shrink: 0;
       margin: 0 10px 0 0;
       width: 32px;
       height: 32px;

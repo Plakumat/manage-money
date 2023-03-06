@@ -198,6 +198,10 @@
     width: 30px;
     height: 30px;
     background-color: transparent;
+
+    @include mq('phone-wide', 'max') {
+      display: none;
+    }
   }
 
   .react-multiple-carousel__arrow--left::before,

@@ -6,17 +6,32 @@
   width: 100%;
   height: 45px;
 
+  @include mq('phone-wide', 'max') {
+    height: auto;
+  }
+
   &__left {
     display: flex;
     flex-direction: row;
     align-items: center;
     width: 100%;
     max-width: 745px;
+
+    @include mq('phone-wide', 'max') {
+      flex-direction: column;
+      padding: 10px 0;
+    }
   }
 
   &__nav {
     display: flex;
     flex-direction: row;
+
+    @include mq('tablet', 'max') {
+      display: flex;
+      flex-direction: row;
+      margin: 0 auto;
+    }
 
     &__item {
       position: relative;
@@ -31,12 +46,18 @@
       border-radius: 12px;
       cursor: pointer;
 
+      @include mq('tablet', 'max') {
+        max-width: 33px;
+        overflow: hidden;
+      }
+
       &.accounts--item::before,
       &.cards--item::before,
       &.processes--item::before,
       &.campaigns--item::before {
         content: '';
         display: flex;
+        flex-shrink: 0;
         margin: 0 16px 0 0;
         width: 36px;
         height: 36px;
@@ -104,6 +125,10 @@
         opacity: 0;
         visibility: hidden;
 
+        @include mq('tablet', 'max') {
+          display: none;
+        }
+
         &__item {
           padding: 15px 24px;
           color: $medium-gray;
@@ -139,19 +164,37 @@
     width: 88px;
     height: 45px;
     object-fit: cover;
+
+    @include mq('tablet-medium', 'max') {
+      margin: 0;
+    }
+    @include mq('phone-wide', 'max') {
+      margin: 0 0 10px 0;
+    }
   }
 
   &__right {
+    position: relative;
     display: flex;
     flex-direction: row;
     width: 100%;
     max-width: 165px;
     cursor: pointer;
 
+    @include mq('desktop-mini', 'max') {
+      justify-content: flex-end;
+      max-width: 40px;
+    }
+
     &__wrapper {
       position: relative;
       width: auto;
       height: auto;
+
+      @include mq('phone', 'max') {
+        left: -10px;
+        top: -20px;
+      }
     }
 
     &__avatar {
@@ -168,6 +211,10 @@
     justify-content: center;
     align-items: flex-start;
     margin: 0 0 0 12px;
+
+    @include mq('desktop-mini', 'max') {
+      display: none;
+    }
 
     &__name {
       margin: 0 0 5px 0;

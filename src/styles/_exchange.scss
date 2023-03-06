@@ -8,6 +8,12 @@
   background-color: $white;
   box-sizing: border-box;
 
+  @include mq('desktop-mini', 'max') {
+    flex-wrap: wrap;
+    min-height: unset;
+    height: auto;
+  }
+
   &__item {
     display: flex;
     justify-content: center;
@@ -15,12 +21,31 @@
     width: calc(100% / 4);
     border-right: 1px solid $dark-white;
 
+    @include mq('desktop-mini', 'max') {
+      margin: 10px 0;
+      width: 49%;
+    }
+
+    @include mq('tablet-small', 'max') {
+      justify-content: flex-start;
+      width: 100%;
+    }
+
     &__info {
       display: flex;
       flex-direction: row;
       width: 100%;
       max-width: 265px;
       white-space: nowrap;
+
+      @include mq('desktop-mini', 'max') {
+        justify-content: center;
+      }
+
+      @include mq('tablet-small', 'max') {
+        position: relative;
+        justify-content: flex-start;
+      }
     }
 
     &__image {
@@ -63,7 +88,7 @@
     }
 
     &__title {
-      @include font-size(14);
+      @include font-size(14, 18);
       font-weight: 600;
       letter-spacing: 0.2px;
       color: $darker-black;
@@ -71,23 +96,45 @@
 
     &__status {
       color: $algae-green;
-      @include font-size(12);
+      @include font-size(12, 16);
     }
 
     &__amount {
       color: $darker-black;
-      @include font-size(26);
+      @include font-size(26, 30);
       font-weight: 600;
       letter-spacing: 0.37px;
+
+      @include mq('tablet-small', 'max') {
+        position: absolute;
+        right: 0;
+        @include font-size(20, 24);
+      }
     }
 
     &:first-child {
       justify-content: flex-start;
+
+      @include mq('desktop-mini', 'max') {
+        justify-content: center;
+      }
+
+      @include mq('tablet-small', 'max') {
+        justify-content: flex-start;
+      }
     }
 
     &:last-child {
       justify-content: flex-end;
       border: 0;
+
+      @include mq('desktop-mini', 'max') {
+        justify-content: center;
+      }
+
+      @include mq('tablet-small', 'max') {
+        justify-content: flex-start;
+      }
     }
   }
 }
