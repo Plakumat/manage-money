@@ -1,5 +1,6 @@
 import React from 'react';
 import Badge from '../badge';
+import { ACCOUNTS, CARDS, PROCESSES, CAMPAIGNS } from '../../model';
 import Fups from '../../assets/svg/fups.svg';
 import Avatar from '../../assets/avatar.png';
 
@@ -11,26 +12,46 @@ const Header: React.FC<IHeaderProps> = (props: IHeaderProps) => {
       <div className='header__left'>
         <img src={Fups} className='header__logo' alt='logo' />
         <nav className='header__nav'>
-          <a
-            className='header__nav__item accounts--item active--item'
-            href='#accounts'
-          >
-            Hesaplar
-          </a>
+          <div className='header__nav__item accounts--item active--item'>
+            {ACCOUNTS}
+            <div className='dropdown'>
+              <a href='#dropdown-menu' className='dropdown__item'>
+                Menu 1
+              </a>
+              <a href='#dropdown-menu' className='dropdown__item'>
+                Menu 2
+              </a>
+              <a href='#dropdown-menu' className='dropdown__item'>
+                Menu 3
+              </a>
+              <a href='#dropdown-menu' className='dropdown__item'>
+                Menu 4
+              </a>
+              <a href='#dropdown-menu' className='dropdown__item'>
+                Menu 5
+              </a>
+              <a href='#dropdown-menu' className='dropdown__item'>
+                Menu 6
+              </a>
+              <a href='#dropdown-menu' className='dropdown__item'>
+                Menu 7
+              </a>
+            </div>
+          </div>
           <a className='header__nav__item cards--item' href='#cards'>
-            Kartlar
+            {CARDS}
           </a>
           <a className='header__nav__item processes--item' href='#processes'>
-            İşlemler
+            {PROCESSES}
           </a>
           <a className='header__nav__item campaigns--item' href='#campaigns'>
-            Kampanyalar
+            {CAMPAIGNS}
           </a>
         </nav>
       </div>
       <div className='header__right' onClick={logout}>
         <div className='header__right__wrapper'>
-          <Badge />
+          <Badge value={12} />
           <img src={Avatar} className='header__right__avatar' alt='avatar' />
         </div>
         <div className='header__user'>

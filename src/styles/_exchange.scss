@@ -15,15 +15,6 @@
     width: calc(100% / 4);
     border-right: 1px solid $dark-white;
 
-    &:first-child {
-      justify-content: flex-start;
-    }
-
-    &:last-child {
-      justify-content: flex-end;
-      border: 0;
-    }
-
     &__info {
       display: flex;
       flex-direction: row;
@@ -88,6 +79,15 @@
       @include font-size(26);
       font-weight: 600;
       letter-spacing: 0.37px;
+    }
+
+    &:first-child {
+      justify-content: flex-start;
+    }
+
+    &:last-child {
+      justify-content: flex-end;
+      border: 0;
     }
   }
 }

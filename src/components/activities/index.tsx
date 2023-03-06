@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import { API } from '../../service';
+import { ACTIVITIES, SPEND_ANALYSIS, MOCK_AMOUNT } from '../../model';
 import Pagination from '../pagination';
 import Food from '../../assets/svg/food.svg';
 import Gold from '../../assets/svg/gold.svg';
@@ -39,9 +40,9 @@ const Activities: React.FC = () => {
   return (
     <section className='activities'>
       <div className='activities__head'>
-        <div className='activities__title'>HESAP HAREKETLERİ</div>
+        <div className='activities__title'>{ACTIVITIES}</div>
         <Link to='#spending-analysis' className='activities__link'>
-          Harcama Analizi
+          {SPEND_ANALYSIS}
         </Link>
       </div>
       <div className='activities__wrapper'>
@@ -75,7 +76,7 @@ const Activities: React.FC = () => {
                           : 'out--money'
                       }`}
                     >
-                      ₺ 200
+                      {MOCK_AMOUNT}
                     </span>
                     <span className='activities__item__right__time'>
                       {post.id ? `${2 * post.id} saat önce` : null}

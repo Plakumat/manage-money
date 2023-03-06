@@ -11,12 +11,12 @@ const Badge: React.FC<IBadgeProps> = (props: IBadgeProps) => {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 12px;
-    height: 12px;
+    width: 16px;
+    height: 16px;
     background-color: #f20028;
     border-radius: 50%;
     color: #fff;
-    font-size: 11px;
+    font-size: 10px;
     font-weight: bold;
   `;
 

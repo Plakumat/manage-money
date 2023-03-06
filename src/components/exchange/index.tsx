@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { CurrencyAPI } from '../../service';
+import { DOLAR, EURO, STERLIN, GRAM_ALTIN, CURRENCY_STATUS } from '../../model';
 import Dollar from '../../assets/svg/dollar.svg';
 import Euro from '../../assets/svg/euro.svg';
 import Sterlin from '../../assets/svg/sterlin.svg';
@@ -48,8 +49,8 @@ const Exchange: React.FC = () => {
 
   useEffect(() => {
     if (loading) {
-      getCurrencyList().catch(console.error);
-      getGoldPricesList().catch(console.error);
+      // getCurrencyList().catch(console.error);
+      // getGoldPricesList().catch(console.error);
     }
 
     setLoading(true);
@@ -69,8 +70,10 @@ const Exchange: React.FC = () => {
                       <img src={Dollar} alt='dollar' />
                     </div>
                     <div className='exchange__item__wrapper'>
-                      <span className='exchange__item__title'>DOLAR</span>
-                      <span className='exchange__item__status'>% 1.06</span>
+                      <span className='exchange__item__title'>{DOLAR}</span>
+                      <span className='exchange__item__status'>
+                        {CURRENCY_STATUS}
+                      </span>
                     </div>
                     <span className='exchange__item__amount'>
                       {currency.selling}
@@ -87,8 +90,10 @@ const Exchange: React.FC = () => {
                       <img src={Euro} alt='euro' />
                     </div>
                     <div className='exchange__item__wrapper'>
-                      <span className='exchange__item__title'>EURO</span>
-                      <span className='exchange__item__status'>% 1.06</span>
+                      <span className='exchange__item__title'>{EURO}</span>
+                      <span className='exchange__item__status'>
+                        {CURRENCY_STATUS}
+                      </span>
                     </div>
                     <span className='exchange__item__amount'>
                       {currency.selling}
@@ -105,8 +110,10 @@ const Exchange: React.FC = () => {
                       <img src={Sterlin} alt='sterlin' />
                     </div>
                     <div className='exchange__item__wrapper'>
-                      <span className='exchange__item__title'>STERLİN</span>
-                      <span className='exchange__item__status'>% 1.06</span>
+                      <span className='exchange__item__title'>{STERLIN}</span>
+                      <span className='exchange__item__status'>
+                        {CURRENCY_STATUS}
+                      </span>
                     </div>
                     <span className='exchange__item__amount'>
                       {currency.selling}
@@ -117,7 +124,6 @@ const Exchange: React.FC = () => {
             }
           }
         })}
-
       {goldPricesList && goldPricesList.selling && (
         <div className='exchange__item'>
           <div className='exchange__item__info'>
@@ -125,8 +131,8 @@ const Exchange: React.FC = () => {
               <img src={Gold} alt='gold' />
             </div>
             <div className='exchange__item__wrapper'>
-              <span className='exchange__item__title'>GRAM ALTIN</span>
-              <span className='exchange__item__status'>% 1.06</span>
+              <span className='exchange__item__title'>{GRAM_ALTIN}</span>
+              <span className='exchange__item__status'>{CURRENCY_STATUS}</span>
             </div>
             <span className='exchange__item__amount'>
               {goldPricesList.selling}
