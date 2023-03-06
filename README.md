@@ -25,6 +25,7 @@ Libraries used:
 │   ├── assets
 │   ├── components
 │   │       ├── activities
+│   │       ├── badge
 │   │       ├── button
 │   │       ├── carousel
 │   │       ├── exchange
@@ -39,7 +40,9 @@ Libraries used:
 │   ├── features
 │   ├── helpers
 │   ├── model
-│   └── styles
+│   ├── service
+│   ├── styles
+│   └── utils
 ├── App.tsx
 ├── index.tsx
 ├── package.json
