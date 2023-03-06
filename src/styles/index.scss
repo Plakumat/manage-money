@@ -8,9 +8,12 @@
 @import 'variables';
 @import 'mixin';
 @import 'reset';
-@import 'header';
-@import 'footer';
 @import 'login';
+@import 'header';
+@import 'dashboard';
+@import 'carousel';
+@import 'activities';
+@import 'exchange';
 @import 'overrides';
 
 * {

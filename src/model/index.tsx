@@ -11,6 +11,30 @@ export const SCAN_QR = 'QR Kodu okutarak internet şubeye giriş yapabilirsiniz.
 export const FORGOT_PASSWORD = 'Şifremi Unuttum';
 export const LOGIN = 'GİRİŞ YAP';
 
+export const CarouselResponsive = {
+  superLargeDesktop: {
+    breakpoint: { max: 4000, min: 3000 },
+    items: 5,
+  },
+  desktop: {
+    breakpoint: { max: 3000, min: 1024 },
+    items: 4,
+    partialVisibilityGutter: 10,
+  },
+  tablet: {
+    breakpoint: { max: 1024, min: 700 },
+    items: 3,
+  },
+  mobile: {
+    breakpoint: { max: 700, min: 430 },
+    items: 2,
+  },
+  superMobile: {
+    breakpoint: { max: 430, min: 320 },
+    items: 1,
+  },
+};
+
 export interface IButtonProps {
   onClick?: (e: React.MouseEvent<HTMLElement>) => any;
   children: any;

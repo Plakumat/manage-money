@@ -1,0 +1,163 @@
+.activities {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 50px 0;
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+
+  &__head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 14px 0;
+  }
+
+  &__title {
+    color: $darker-black;
+    @include font-size(14);
+    font-weight: 600;
+    letter-spacing: 0.2px;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    color: $blue;
+    @include font-size(14, 18);
+    font-weight: 600;
+    letter-spacing: 0.2px;
+    text-decoration: none;
+
+    &::after {
+      content: '';
+      margin: 0 0 0 4px;
+      width: 20px;
+      height: 20px;
+      -webkit-mask-image: url('../assets/svg/arrow-right.svg');
+      mask-image: url('../assets/svg/arrow-right.svg');
+      -webkit-mask-position: center;
+      mask-position: center;
+      -webkit-mask-repeat: no-repeat;
+      mask-repeat: no-repeat;
+      -webkit-mask-size: cover;
+      mask-size: cover;
+      background-color: $blue;
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+    width: 100%;
+    height: 347px;
+    padding: 0 24px;
+    border-radius: 12px;
+    background-color: $white;
+    box-sizing: border-box;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 0;
+    width: 100%;
+    border-bottom: 1px solid $whiter-gray;
+
+    &__left {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      max-width: 218px;
+
+      &__wrapper {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 0 0 0 16px;
+      }
+    }
+
+    &__right {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      width: 70px;
+
+      &__amount {
+        margin: 0 0 5px 0;
+        @include font-size(16, 20);
+        font-weight: 600;
+        letter-spacing: 0.4px;
+        color: $darker-black;
+
+        &.out--money {
+          &::before {
+            content: '-';
+            margin: 0 5px 0 0;
+          }
+        }
+
+        &.in--money {
+          color: $algae-green;
+        }
+      }
+
+      &__time {
+        @include font-size(12, 16);
+        color: $darker-gray;
+      }
+    }
+  }
+
+  &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    flex-shrink: 0;
+
+    &.icon--food {
+      background-color: $light-indigo;
+    }
+
+    &.icon--money {
+      background-color: $algae-green;
+    }
+
+    &.icon--gold {
+      background-color: $butterscotch;
+    }
+
+    .icon {
+      width: 20px;
+      height: 20px;
+      object-fit: cover;
+    }
+  }
+
+  &__small-title {
+    max-width: 250px;
+    color: $darker-black;
+    @include font-size(16, 20);
+    font-weight: 600;
+    letter-spacing: 0.4px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  &__description {
+    margin: 5px 0 0 0;
+    color: $darker-gray;
+    @include font-size(12, 16);
+  }
+
+  &__pagination {
+    position: absolute;
+    bottom: 24px;
+    width: 100%;
+  }
+}

@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { logout, selectUser } from '../features/userSlice';
 import { removeSession } from '../helpers';
+import { Header, Carousel, Activities, Exchange } from '../components';
 
 const Dashboard = () => {
   const dispatch = useDispatch();
@@ -26,13 +27,15 @@ const Dashboard = () => {
   }, [user, logoutRedirect]);
 
   if (user) {
-    const { userName } = user;
+    const { userName, userType } = user;
 
     return (
-      <>
-        <p>Welcome {userName}</p>
-        <button onClick={handleLogout}>Logout</button>
-      </>
+      <section className='dashboard'>
+        <Header username={userName} userType={userType} logout={handleLogout} />
+        <Carousel />
+        <Activities />
+        <Exchange />
+      </section>
     );
   }
 

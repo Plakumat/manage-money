@@ -1,0 +1,84 @@
+.carousel {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: 74px 0 54px;
+  width: 100%;
+
+  &__title {
+    margin: 0 0 14px 0;
+    color: $darker-black;
+    @include font-size(14);
+    font-weight: 600;
+    letter-spacing: 0.2px;
+  }
+
+  &__wrapper {
+    display: flex;
+    width: calc(100% + 40px);
+    height: 185px;
+    padding: 10px 0;
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    max-width: 325px;
+    height: 160px;
+    border-radius: 12px;
+    background-color: $white;
+    margin-right: 10px;
+
+    &__left {
+      position: relative;
+      width: 96px;
+      height: 100%;
+    }
+
+    &__image {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 96px;
+      height: 170px;
+    }
+
+    &__info {
+      display: flex;
+      flex-direction: column;
+      max-width: 192px;
+      margin: 0 0 0 7px;
+    }
+
+    &__title {
+      margin: 0 0 10px 0;
+      color: $darker-black;
+      @include font-size(14, 18);
+      font-weight: 600;
+      letter-spacing: 0.2px;
+    }
+
+    &__description {
+      color: $medium-gray;
+      @include font-size(14, 18);
+      font-weight: 500;
+    }
+
+    &__redirect {
+      position: absolute;
+      bottom: 14px;
+      right: 14px;
+      width: 12px;
+      height: 12px;
+      background-color: $whiter-gray;
+      background-image: url('../assets/svg/arrow-right.svg');
+      background-position: center center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      border-radius: 50%;
+    }
+  }
+}

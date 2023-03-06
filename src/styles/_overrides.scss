@@ -136,3 +136,76 @@
 .visibility-icon {
   width: 18px !important;
 }
+
+.dashboard {
+  .react-multi-carousel-list {
+    position: unset;
+    align-items: flex-start;
+  }
+
+  .react-multi-carousel-dot-list {
+    .react-multi-carousel-dot button {
+      width: 8px;
+      height: 8px;
+      background-color: $shade-gray;
+    }
+
+    .react-multi-carousel-dot--active button {
+      background-color: $blue;
+    }
+
+    .react-multi-carousel-dot button,
+    .react-multi-carousel-dot--active button {
+      border: 0;
+    }
+  }
+
+  .react-multiple-carousel__arrow--left {
+    top: 2px;
+    left: unset;
+    right: 54px;
+
+    &::before {
+      background-image: url('../assets/svg/arrow-right.svg');
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+      transform: rotate(180deg);
+    }
+  }
+
+  .react-multiple-carousel__arrow--right {
+    top: 2px;
+    right: 4px;
+
+    &::before {
+      background-image: url('../assets/svg/arrow-right.svg');
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
+  }
+
+  .react-multiple-carousel__arrow--left,
+  .react-multiple-carousel__arrow--right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: unset;
+    min-height: unset;
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+  }
+
+  .react-multiple-carousel__arrow--left::before,
+  .react-multiple-carousel__arrow--right::before {
+    content: '';
+    margin: 0;
+    padding: 0;
+    width: 20px;
+    height: 20px;
+  }
+}

@@ -95,7 +95,7 @@ const Form: React.FC<IFormProps> = (props: IFormProps) => {
   }, [allErrorToggle]);
 
   return (
-    <form className='form' onSubmit={handleSubmit}>
+    <form className='form' autoComplete='off' onSubmit={handleSubmit}>
       <Select
         value={userType}
         label='Kullanıcı Tipi'

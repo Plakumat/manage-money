@@ -1,3 +1,9 @@
+export { default as Activities } from './activities';
+export { default as Header } from './header';
+export { default as Carousel } from './carousel';
+export { default as Exchange } from './exchange';
+export { default as Pagination } from './pagination';
+export { default as Badge } from './badge';
 export { default as Select } from './select';
 export { default as Textfield } from './textfield';
 export { default as Button } from './button';
